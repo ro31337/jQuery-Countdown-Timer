@@ -1,7 +1,7 @@
 (function($) {
 "use strict";
 
-var gTicksLeft = 60 * 10;
+var gTicksLeft = 0;
 
 var digit1 = 0;
 var digit2 = 0;
@@ -118,13 +118,21 @@ var tick = function()
 
     if (getTicksLeft() === 0) {
         clearInterval(gIntervalToken);
+        gIntervalToken = null;
         $.timeout(roll_to_end, 1000);
     }
 };
 
-window.CounterInit = function() {
-    //alert('aa');
+window.CounterInit = function(ticksCount) {
+    if (ticksCount === null || isNaN(ticksCount)) {
+        ticksCount = 10 * 60;
+    }
+    gTicksLeft = ticksCount;
     init();
+    if (gIntervalToken !== null) {
+        clearInterval(gIntervalToken);
+        gIntervalToken = null;
+    }
     // strange chrome bug workaround
     $.timeout(function() {
         gIntervalToken = $.interval(tick, 1000);
