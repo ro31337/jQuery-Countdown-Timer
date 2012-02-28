@@ -1,8 +1,4 @@
-/* reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-style:inherit;font-size:100%;font-family:inherit;margin:0;padding:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:separate;border-spacing:0;}caption,th,td{text-align:left;font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}h3{font-weight:inherit;}h2{font-weight:inherit;}
-
-#centered_div {
-	position:absolute;	top: 30%;	left: 50%;	width:30em;	height:18em;	margin-top: -9em; /*set to a negative number 1/2 of your height*/	margin-left: -15em; /*set to a negative number 1/2 of your width*/	text-align: center;}#counter{    margin-top: 20px;    margin-left: 135px;    background-color: #222;    width: 154px;    height: 59px;    border-radius: 3px;
+#counter{    margin-top: 20px;    margin-left: 135px;    background-color: #222;    width: 154px;    height: 59px;    border-radius: 3px;
     -webkit-border-radius: 3px;
     -opera-border-radius: 3px;
     -moz-border-radius: 3px;}#counter_item1{    margin-left: 2px;}.counter_item{    width: 30px;    height: 55px;    background: transparent url(images/counter_back.gif) no-repeat;    overflow: hidden;    float: left;    margin-top: 2px;}.counter_item .digit, .counter_item .front{    width: 30px;    height: 55px;    overflow: hidden;}.counter_item .front{    background: transparent url(images/counter_front.png) no-repeat;    position: fixed;    z-index: 10;      }.counter_item .digit_colon{    background: transparent url(images/counter_digits.png) no-repeat 0 0px;            }.counter_item .digit0{    background: transparent url(images/counter_digits.png) no-repeat 0 -55px;        }.counter_item .digit1{    background: transparent url(images/counter_digits.png) no-repeat 0 -110px;        }.counter_item .digit2{    background: transparent url(images/counter_digits.png) no-repeat 0 -165px;        }.counter_item .digit3{    background: transparent url(images/counter_digits.png) no-repeat 0 -220px;        }.counter_item .digit4{    background: transparent url(images/counter_digits.png) no-repeat 0 -275px;        }.counter_item .digit5{    background: transparent url(images/counter_digits.png) no-repeat 0 -330px;        }.counter_item .digit6{    background: transparent url(images/counter_digits.png) no-repeat 0 -385px;        }.counter_item .digit7{    background: transparent url(images/counter_digits.png) no-repeat 0 -440px;        }.counter_item .digit8{    background: transparent url(images/counter_digits.png) no-repeat 0 -495px;        }.counter_item .digit9{    background: transparent url(images/counter_digits.png) no-repeat 0 -550px;        }.counter_item .digit_cherry{    background: transparent url(images/counter_digits.png) no-repeat 0 -605px;        }body{    background: #606060 url(images/counter_bg.jpg);
@@ -10,31 +6,4 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
     font-size: 14px;
     line-height: 1.7em;
     text-shadow: 0 1px 1px #DDD;
-}
-
-a
-{
-    color: #78200f;
-}
-a:visited
-{
-    color: #3d343a;
-}
-a:hover
-{
-    text-decoration: none;
-}
-
-.footer
-{
-    font-size: 11px; padding-top: 40px;
-    text-shadow: none !important;
-    color: #555;    
-    line-height: 18px;
-}
-.footer a
-{
-    color: #555;
-    text-decoration: none;
-    border-bottom: 1px dotted #555;
 }
