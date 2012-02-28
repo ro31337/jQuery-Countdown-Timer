@@ -1,0 +1,32 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-style:inherit;font-size:100%;font-family:inherit;margin:0;padding:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:separate;border-spacing:0;}caption,th,td{text-align:left;font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}h3{font-weight:inherit;}h2{font-weight:inherit;}
+
+#centered_div {
+	position:absolute;	top: 30%;	left: 50%;	width:30em;	height:18em;	margin-top: -9em; /*set to a negative number 1/2 of your height*/	margin-left: -15em; /*set to a negative number 1/2 of your width*/	text-align: center;}
+
+a
+{
+    color: #78200f;
+}
+a:visited
+{
+    color: #3d343a;
+}
+a:hover
+{
+    text-decoration: none;
+}
+
+.footer
+{
+    font-size: 11px; padding-top: 40px;
+    text-shadow: none !important;
+    color: #555;    
+    line-height: 18px;
+}
+.footer a
+{
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #555;
+}
