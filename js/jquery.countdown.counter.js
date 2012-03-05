@@ -18,16 +18,16 @@ var decTicksLeft = function() {
     gTicksLeft--;
 };
 
-var removeAllDigits = function(element) {
-    element.removeClass("digit0 digit1 digit2 digit3 digit4 digit5 digit6 digit7 digit8 digit9");
+var removeAllDigits = function($element) {
+    $element.removeClass("digit0 digit1 digit2 digit3 digit4 digit5 digit6 digit7 digit8 digit9");
 };
 
 var setItem = function(itemNumber, digit) {
     var token = "#counter_item" + itemNumber + " :first-child";
-    var element = $(token).next(); // second child
+    var $element = $(token).next(); // second child
 
-    removeAllDigits(element);
-    $(element).addClass("digit" + digit);
+    removeAllDigits($element);
+    $element.addClass("digit" + digit);
 };
 
 var calculateDigits = function() {
@@ -57,46 +57,45 @@ var switchItem = function(itemNumber, digit, capacity) {
     //$("#log2").text("digit" + digit + ", next digit: " + nextDigit);
 
     var token = "#counter_item" + itemNumber + " :first-child";
-    var element = $(token).next(); // second child
+    var $element = $(token).next(); // second child
 
-    removeAllDigits(element);
-    $(element).addClass("digit" + digit);
-    $(element).after('<div class="digit digit' + nextDigit + '" style="margin-top: 55px"></div>');
+    removeAllDigits($element);
+    $element.addClass("digit" + digit);
+    $element.after('<div class="digit digit' + nextDigit + '" style="margin-top: 55px"></div>');
 
-    var newElement = $(element).next();
-    $(element).animate({
+    var $newElement = $element.next();
+    $element.animate({
         "margin-top": -55
-    }, 500, function () { $(element).remove(); });
+    }, 500, function () { $element.remove(); });
 
-    $(newElement).animate({
+    $newElement.animate({
         "margin-top": 0
     }, 500);
 
-    //$(newElement).removeClass("digit_cherry");
 };
 
-var counter_finished = function() {
+var counterFinished = function() {
     alert("time's up!");
 };
 
-var roll_to_end = function() {
+var rollToEnd = function() {
     for (var itemNumber = 1; itemNumber <= 5; itemNumber++) {
 
         var token = "#counter_item" + itemNumber + " :first-child";
-        var element = $(token).next(); // second child
+        var $element = $(token).next(); // second child
 
-        $(element).after('<div class="digit digit_cherry" style="margin-top: 55px"></div>');
+        $element.after('<div class="digit digit_cherry" style="margin-top: 55px"></div>');
 
-        var newElement = $(element).next();
-        $(element).animate({
+        var $newElement = $element.next();
+        $element.animate({
             "margin-top": -55
-        }, 500, function () { $(element).remove(); });
+        }, 500, function () { $element.remove(); });
 
-        $(newElement).animate({
+        $newElement.animate({
             "margin-top": 0
         }, 500);
     }
-    $.timeout(counter_finished, 1000);
+    $.timeout(counterFinished, 1000);
 };
 
 var tick = function()
@@ -119,7 +118,7 @@ var tick = function()
     if (getTicksLeft() === 0) {
         clearInterval(gIntervalToken);
         gIntervalToken = null;
-        $.timeout(roll_to_end, 1000);
+        $.timeout(rollToEnd, 1000);
     }
 };
 
